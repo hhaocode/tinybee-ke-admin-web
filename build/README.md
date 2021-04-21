@@ -1,0 +1,1 @@
+npm install && npm run build && docker build -t huanghao/arcus-web:0.0.1 . && docker run -d -p 80:8001 huanghao/arcus-web:0.0.1

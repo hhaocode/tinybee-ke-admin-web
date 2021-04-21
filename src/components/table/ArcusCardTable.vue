@@ -1,0 +1,102 @@
+<template>
+  <div class="page-table-wrapper" v-loading="loading">
+    <div class="page-table-content">
+      <el-row>
+        {{action}}
+      </el-row>
+    </div>
+    <div class="page-table-pagination">
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="pageParam.page"
+        :page-sizes="[2, 5, 10, 20, 50, 100]"
+        :page-size="pageParam.size"
+        background
+        layout="total, sizes, prev, pager, next, jumper"
+        :pager-count="5"
+        :total="total">
+      </el-pagination>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ArcusCardTable',
+  props: {
+    showSummary: {
+      type: Boolean,
+      default: false
+    },
+    tableOption: {
+      type: Object,
+      default: () => {}
+    },
+    // queryParam: {
+    //   type: Object,
+    //   default: () => {}
+    // },
+    action: {
+      type: String,
+      default: () => ''
+    }
+  },
+  data () {
+    return {
+      loading: false,
+      currentPage: 1,
+      pageParam: {
+        page: 1,
+        size: 10,
+        orderBy: ''
+      },
+      data: [],
+      total: 0,
+      emptyText: '暂无数据',
+      param: {}
+    }
+  },
+  methods: {
+    handleSortChange (orderBy) {
+      console.log('Order by => ', orderBy)
+    },
+    handleSizeChange (val) {
+      console.log(`每页 ${val} 条`)
+      this.pageParam.size = val
+      this.search()
+    },
+    handleCurrentChange (val) {
+      console.log(`当前页: ${val}`)
+      this.pageParam.page = val
+      this.search()
+    },
+    handleMergeParam () {
+      return Object.assign({}, this.pageParam, this.param)
+    },
+    refresh () {
+      this.pageParam.page = 1
+      this.search()
+    },
+    search (param) {
+      if (param) {
+        this.param = param
+      }
+      this.loading = true
+      this.$store.dispatch(this.action, this.handleMergeParam()).then(res => {
+        this.data = (res && res.records) || []
+        this.total = (res && res.total) || 0
+        this.emptyText = '暂无数据'
+        this.loading = false
+      }).catch(e => {
+        this.emptyText = e
+        this.loading = false
+      })
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>

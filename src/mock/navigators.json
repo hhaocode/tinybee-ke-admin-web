@@ -1,0 +1,201 @@
+[
+  {
+    "id": 1,
+    "title": "商品",
+    "path": "",
+    "icon": "",
+    "children": [
+      {
+        "id": 11,
+        "title": "项目简介",
+        "path": "/mall/project-intro",
+        "icon": ""
+      },
+      {
+        "id": 12,
+        "title": "商品需求文档",
+        "path": "/mall/goods-requirement-doc",
+        "icon": ""
+      },
+      {
+        "id": 13,
+        "title": "商品管理",
+        "icon": "",
+        "children": [
+          {
+            "id": 131,
+            "title": "发布商品",
+            "path": "/mall/goods/publish-goods"
+          },
+          {
+            "id": 132,
+            "title": "商品管理",
+            "path": "/mall/goods/goods-manage"
+          },
+          {
+            "id": 133,
+            "title": "商品库存",
+            "path": "/mall/goods/goods-stock"
+          },
+          {
+            "id": 134,
+            "title": "商品审核",
+            "path": "/mall/goods/goods-review"
+          },
+          {
+            "id": 135,
+            "title": "商品搜索",
+            "path": "/mall/goods/goods-search"
+          },
+          {
+            "id": 136,
+            "title": "品牌管理",
+            "path": "/mall/goods/brand-manage"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "类目管理",
+        "icon": "",
+        "children": [
+          {
+            "id": 141,
+            "title": "前台类目",
+            "path": "/mall/goods/front-category"
+          },
+          {
+            "id": 142,
+            "title": "后台类目",
+            "path": "/mall/goods/back-category"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "属性管理",
+        "icon": "",
+        "children": [
+          {
+            "id": 151,
+            "title": "属性管理",
+            "path": "/mall/goods/attribute-manage"
+          },
+          {
+            "id": 152,
+            "title": "属性组管理",
+            "path": "/mall/goods/attribute-group-manage"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "素材管理",
+        "icon": "",
+        "children": [
+          {
+            "id": 161,
+            "title": "图片管理",
+            "path": "/mall/goods/picture-manage"
+          },
+          {
+            "id": 162,
+            "title": "视频管理",
+            "path": "/mall/goods/video-manage"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title": "购物车管理",
+        "icon": "",
+        "children": [
+          {
+            "id": 171,
+            "title": "购物车",
+            "path": "/mall/goods/shopping-cart"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "订单",
+    "path": "",
+    "icon": ""
+  },
+  {
+    "id": 3,
+    "title": "营销",
+    "path": "",
+    "icon": "",
+    "children": [
+      {
+        "id": 31,
+        "title": "营销需求文档",
+        "path": "/mall/sem"
+      },
+      {
+        "id": 32,
+        "title": "促销",
+        "path": "/mall/sem",
+        "children": [
+          {
+            "id": 321,
+            "title": "满减/满折",
+            "path": "/mall/sem"
+          },
+          {
+            "id": 322,
+            "title": "秒杀",
+            "path": "/mall/sem"
+          },
+          {
+            "id": 323,
+            "title": "赠品套装",
+            "path": "/mall/sem"
+          },
+          {
+            "id": 324,
+            "title": "拼团",
+            "path": "/mall/sem"
+          },
+          {
+            "id": 325,
+            "title": "定金预售",
+            "path": "/mall/sem"
+          },
+          {
+            "id": 326,
+            "title": "活动审核",
+            "path": "/mall/sem"
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "title": "CMS",
+        "path": "/mall/sem",
+        "children": [
+          {
+            "id": 331,
+            "title": "页面管理",
+            "path": "/mall/sem"
+          },
+          {
+            "id": 332,
+            "title": "样式模板管理",
+            "path": "/mall/sem"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "用户",
+    "path": "",
+    "icon": ""
+  }
+]
